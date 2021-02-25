@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
-import time
 
 print('Put some skill that you are not familiar with')
 unfamiliar_skill = input('>')
 print(f'Flitering out {unfamiliar_skill}')
+html_text = requests.get('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation=').text
 
 def find_jobs():
     html_text = requests.get('https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation=').text
